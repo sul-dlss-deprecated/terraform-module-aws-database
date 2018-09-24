@@ -31,7 +31,7 @@ resource "aws_neptune_cluster_instance" "neptune_instance" {
   count                        = 1
   engine                       = "${var.engine}"
   instance_class               = "${var.instance_class}"
-  cluster_identifier           = "${var.name}"
+  cluster_identifier           = "${var.name}-neptune-cluster"
   neptune_parameter_group_name = "${aws_neptune_parameter_group.neptune-param-group.name}"
   apply_immediately            = true
 
