@@ -37,6 +37,8 @@ resource "aws_neptune_cluster_instance" "neptune_instance" {
   neptune_subnet_group_name    = "${aws_neptune_subnet_group.subnet_group.name}"
   apply_immediately            = true
 
+  depends_on = ["aws_neptune_cluster.neptune_cluster"]
+  
   tags {
     Note = "Deployed by terraform"
   }
