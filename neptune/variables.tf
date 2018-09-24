@@ -27,4 +27,6 @@ variable backup_window {
     default = "22:00-23:00"
 }
 
-variable final_stopshot_identifer {}
+variable subnet_ids {
+    type = "list"
+}
