@@ -13,7 +13,7 @@ resource "aws_neptune_subnet_group" "subnet_group" {
   subnet_ids = ["${var.subnet_ids}"]
 
   tags {
-    Name = "${var.name} - Neptune Subnet Group [terraform]"
+    Name = "${var.name} Neptune Subnet Group by terraform"
   }
 }
 
