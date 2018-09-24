@@ -6,8 +6,6 @@ variable encoding {
     default = "utf8"
 }
 
-variable storage {}
-variable storage_type {}
 variable engine {
     default = "postgres"
 }
@@ -18,7 +16,7 @@ variable instance_class {
     default = "db.t2.medium"
 }
 
-variable identifer {}
+variable identifier {}
 variable username {}
 variable password {}
 
@@ -35,4 +33,4 @@ variable backup_window {
     default = "22:00-23:00"
 }
 
-variable final_stopshot_identifer {}
+variable snapshot_identifier {}
