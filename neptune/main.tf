@@ -28,12 +28,12 @@ resource "aws_neptune_cluster" "neptune_cluster" {
 }
 
 resource "aws_neptune_cluster_instance" "neptune_instance" {
-  count                     = 1
-  engine                    = "${var.engine}"
-  instance_class            = "${var.instance_class}"
-  cluster_identifier        = "${var.name}"
-  parameter_group_name      = "${aws_neptune_parameter_group.neptune-param-group.name}"
-  apply_immediately         = true
+  count                        = 1
+  engine                       = "${var.engine}"
+  instance_class               = "${var.instance_class}"
+  cluster_identifier           = "${var.name}"
+  neptune_parameter_group_name = "${aws_neptune_parameter_group.neptune-param-group.name}"
+  apply_immediately            = true
 
   tags {
     Note = "Deployed by terraform"
