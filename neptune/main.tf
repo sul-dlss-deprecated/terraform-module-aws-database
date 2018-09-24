@@ -29,6 +29,7 @@ resource "aws_neptune_cluster" "neptune_cluster" {
 }
 
 resource "aws_neptune_cluster_instance" "neptune_instance" {
+  identifier                   = "${var.name}-neptune"
   count                        = 1
   engine                       = "${var.engine}"
   instance_class               = "${var.instance_class}"
@@ -38,7 +39,7 @@ resource "aws_neptune_cluster_instance" "neptune_instance" {
   apply_immediately            = true
 
   depends_on = ["aws_neptune_cluster.neptune_cluster"]
-  
+
   tags {
     Note = "Deployed by terraform"
   }
