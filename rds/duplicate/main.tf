@@ -9,11 +9,6 @@ resource "aws_db_parameter_group" "rds-param-group" {
 }
 
 resource "aws_db_instance" "db_instance" {
-  allocated_storage         = "${var.storage}"
-  storage_type              = "${var.storage_type}"
-  engine                    = "${var.engine}"
-  engine_version            = "${var.engine_version}"
-  instance_class            = "${var.instance_class}"
   identifier                = "${var.identifier}"
   name                      = "${var.name}"
   username                  = "${var.username}"
@@ -24,7 +19,8 @@ resource "aws_db_instance" "db_instance" {
   backup_retention_period   = "${var.backup_retention_period}"
   backup_window             = "${var.backup_window}"
   final_snapshot_identifier = "${var.final_stopshot_identifer}"
-
+  replicate_source_db       = "${var.replace_source_db}"
+  
   tags {
     Note = "Deployed by terraform"
   }
