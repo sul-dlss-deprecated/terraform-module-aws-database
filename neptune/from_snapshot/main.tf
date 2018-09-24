@@ -29,7 +29,7 @@ resource "aws_neptune_cluster" "neptune_cluster" {
   apply_immediately                   = true
 }
 
-/*
+
 resource "aws_neptune_cluster_instance" "neptune_instance" {
   identifier                   = "${var.name}-neptune"
   count                        = 1
@@ -46,4 +46,3 @@ resource "aws_neptune_cluster_instance" "neptune_instance" {
     Note = "Deployed by terraform"
   }
 }
-*/
