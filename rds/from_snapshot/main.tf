@@ -10,7 +10,6 @@ resource "aws_db_parameter_group" "rds-param-group" {
 
 resource "aws_db_instance" "db_instance" {
   identifier                = "${var.identifier}"
-  name                      = "${var.name}"
   username                  = "${var.username}"
   password                  = "${var.password}"
   instance_class            = "${var.instance_class}"
