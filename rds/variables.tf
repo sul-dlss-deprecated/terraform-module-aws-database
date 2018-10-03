@@ -18,7 +18,7 @@ variable instance_class {
     default = "db.t2.medium"
 }
 
-variable identifer {}
+variable identifier {}
 variable username {}
 variable password {}
 
