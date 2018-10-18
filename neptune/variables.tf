@@ -3,7 +3,7 @@ variable family {
     default = "neptune1"
 }
 variable query_timeout {
-    default = "60"
+    default = "12000"
 }
 
 variable engine {
@@ -17,7 +17,7 @@ variable instance_class {
 }
 
 variable skip_final_snapshot {
-    default = false
+    default = true
 }
 
 variable backup_retention_period {
@@ -28,5 +28,9 @@ variable backup_window {
 }
 
 variable subnet_ids {
+    type = "list"
+}
+
+variable vpc_security_group_ids {
     type = "list"
 }
