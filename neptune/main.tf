@@ -26,6 +26,7 @@ resource "aws_neptune_cluster" "neptune_cluster" {
   neptune_subnet_group_name           = "${aws_neptune_subnet_group.subnet_group.name}"
   iam_database_authentication_enabled = false
   apply_immediately                   = true
+  vpc_security_group_ids              = "${var.vpc_security_group_ids}"
 }
 
 resource "aws_neptune_cluster_instance" "neptune_instance" {
