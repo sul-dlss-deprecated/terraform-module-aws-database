@@ -27,6 +27,7 @@ resource "aws_neptune_cluster" "neptune_cluster" {
   iam_database_authentication_enabled = false
   apply_immediately                   = true
   vpc_security_group_ids              = "${var.vpc_security_group_ids}"
+  snapshot_identifier                 = "${var.snapshot_identifier}"
 }
 
 resource "aws_neptune_cluster_instance" "neptune_instance" {
